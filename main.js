@@ -65,7 +65,8 @@ function renderTable(data) {
   button.textContent = 'Update';
   button.className = 'update-button';
   td2.appendChild(button);
-
+  var $updateButton = document.querySelectorAll('update-button');
+  console.log($updateButton);
   return tr;
 }
 
@@ -75,8 +76,6 @@ for (var i = 0; i < entries.length; i++) {
   var tds = renderTable(entries[i]);
   $tbody.appendChild(tds);
 }
-
-var $updateButton = document.querySelectorAll('update-button');
 
 var $span = document.querySelector('.add');
 
