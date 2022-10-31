@@ -11,7 +11,7 @@ var $form = document.querySelector('form');
 console.log($form);
 
 $form.addEventListener('submit', function (event) {
-  event.preventDefault();
+
   var entry = {};
   entry.day = $form.elements['day-of-week'].value;
   entry.time = $form.elements.time.value;
@@ -21,3 +21,12 @@ $form.addEventListener('submit', function (event) {
 });
 
 var entries = [];
+var $entries = localStorage.getItem('javascript storage');
+if ($entries !== null) {
+  entries = JSON.parse($entries);
+}
+
+window.addEventListener('beforeunload', function (event) {
+  var entriesJson = JSON.stringify(entries);
+  localStorage.setItem('javascript storage', entriesJson);
+});
