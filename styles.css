@@ -64,3 +64,8 @@ textarea {
   justify-content: flex-end;
   text-align: right;
 }
+
+.day-button {
+  padding: 50px;
+  background-color: antiquewhite;
+}
