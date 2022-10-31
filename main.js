@@ -1,3 +1,17 @@
+var entries = [];
+var $entries = localStorage.getItem('javascript storage');
+if ($entries !== null) {
+  entries = JSON.parse($entries);
+}
+
+window.addEventListener('beforeunload', function (event) {
+  var entriesJson = JSON.stringify(entries);
+  localStorage.setItem('javascript storage', entriesJson);
+});
+
+console.log(entries);
+renderTable(entries[0]);
+
 var $entry = document.querySelector('.entry-button');
 console.log($entry);
 
@@ -39,14 +53,22 @@ $weekRow.addEventListener('click', function (event) {
 );
 
 function renderTable(data) {
-  var three = document.createElement('tr');
-  var four = document.createElement('td');
-  four.textContent = data.time;
-  three.appendChild(four);
-  var six = document.createElement('td');
-  six.textContent = data.description;
-  three.appendChild(six);
+  var tr = document.createElement('tr');
+  var td1 = document.createElement('td');
+  td1.textContent = data.time;
+  tr.appendChild(td1);
+  var td2 = document.createElement('td');
+  td2.textContent = data.description;
+  tr.appendChild(td2);
 
+  return tr;
+}
+
+var $tbody = document.querySelector('tbody');
+
+for (var i = 0; i < entries.length; i++) {
+  var tds = renderTable(entries[i]);
+  $tbody.appendChild(tds);
 }
 
 // Check if event.target === $day.textContent
