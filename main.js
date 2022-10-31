@@ -19,3 +19,19 @@ $form.addEventListener('submit', function (event) {
   entries.push(entry);
   $form.reset();
 });
+
+var $dayButton = document.querySelectorAll('.day-button');
+console.log($dayButton);
+
+var $day = document.querySelector('.day');
+console.log($day);
+
+var $weekRow = document.getElementById('week-row');
+
+$weekRow.addEventListener('click', function (event) {
+  $day.textContent = event.target.textContent;
+});
+
+// Check if event.target === $day.textContent
+// if true, set td.textContent to entry.time
+// set second td to entry.description
