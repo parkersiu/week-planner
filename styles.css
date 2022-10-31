@@ -1,0 +1,27 @@
+.container-one {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  text-align: center;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+button {
+  background-color: #95bcf2;
+  margin-top: 60px;
+  padding: 10px 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visable {
+  display: visible;
+}
