@@ -12,7 +12,7 @@
   flex-basis: 100%;
 }
 
-button {
+.entry-button {
   background-color: #95bcf2;
   margin-top: 60px;
   padding: 10px 30px;
@@ -24,4 +24,9 @@ button {
 
 .visable {
   display: visible;
+}
+
+.container-two {
+  position: relative;
+  left: 300px;
 }
