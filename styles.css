@@ -54,3 +54,9 @@ select {
 textarea {
   margin: 5px;
 }
+
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
