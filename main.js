@@ -13,7 +13,7 @@ console.log($form);
 $form.addEventListener('submit', function (event) {
 
   var entry = {};
-  entry.day = $form.elements['day-of-week'].value;
+  entry.day = $form.elements[0].value;
   entry.time = $form.elements.time.value;
   entry.description = $form.elements.description.value;
   entries.push(entry);
