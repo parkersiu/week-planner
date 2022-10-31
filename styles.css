@@ -93,3 +93,7 @@ tr:nth-child(even) {
   background-color: #2a78e4;
   color: white;
 }
+
+button:hover {
+  cursor: pointer;
+}
