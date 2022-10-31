@@ -12,10 +12,12 @@ console.log($form);
 
 $form.addEventListener('submit', function (event) {
   event.preventDefault();
-  var entry = {
-
-  };
-
+  var entry = {};
+  entry.day = $form.elements['day-of-week'].value;
+  entry.time = $form.elements.time.value;
+  entry.description = $form.elements.description.value;
+  entries.push(entry);
+  $form.reset();
 });
 
 var entries = [];
