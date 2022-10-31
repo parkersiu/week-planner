@@ -34,18 +34,16 @@ var $tableRow = document.querySelectorAll('tr');
 $weekRow.addEventListener('click', function (event) {
   $day.textContent = event.target.textContent;
   var three = localStorage.getItem('javascript storage');
-
   if (three !== null) {
     var four = JSON.parse(three);
     for (var i = 0; i < four.length; i++) {
       if (four[i].day === event.target.textContent) {
-        $tableRow[i + 1].firstElementChild.textContent = four[i].time;
-        $tableRow[i + 1].lastElementChild.textContent = four[i].description;
+        $tableRow[i + 1].firstElementChild.textContent = four[i].time.value;
+        $tableRow[i + 1].lastElementChild.textContent = four[i].description.value;
       }
     }
   }
-}
-);
+});
 
 // Check if event.target === $day.textContent
 // if true, set td.textContent to entry.time
