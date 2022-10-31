@@ -12,6 +12,10 @@
   flex-basis: 100%;
 }
 
+.column-seven {
+  flex-basis: calc(100% / 7);
+}
+
 .entry-button {
   background-color: #95bcf2;
   margin-top: 60px;
