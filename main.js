@@ -17,6 +17,7 @@ console.log($entry);
 
 var $container = document.querySelector('.container-two');
 console.log($container);
+
 $entry.addEventListener('click', function (event) {
   $container.className = 'container-two modal visible';
 });
@@ -60,6 +61,10 @@ function renderTable(data) {
   var td2 = document.createElement('td');
   td2.textContent = data.description;
   tr.appendChild(td2);
+  var button = document.createElement('button');
+  button.textContent = 'Update';
+  button.className = 'update-button';
+  td2.appendChild(button);
 
   return tr;
 }
@@ -71,6 +76,11 @@ for (var i = 0; i < entries.length; i++) {
   $tbody.appendChild(tds);
 }
 
-// Check if event.target === $day.textContent
-// if true, set td.textContent to entry.time
-// set second td to entry.description
+var $updateButton = document.querySelectorAll('update-button');
+
+var $span = document.querySelector('.add');
+
+$tbody.addEventListener('click', function (event) {
+  $container.className = 'container-two modal visible';
+  $span.textContent = 'Update';
+});

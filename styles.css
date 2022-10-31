@@ -88,3 +88,8 @@ tr {
 tr:nth-child(even) {
   background-color: rgb(238, 238, 238);
 }
+
+.update-button {
+  background-color: #2a78e4;
+  color: white;
+}
