@@ -8,3 +8,6 @@ window.addEventListener('beforeunload', function (event) {
   var entriesJson = JSON.stringify(entries);
   localStorage.setItem('javascript storage', entriesJson);
 });
+
+console.log(entries);
+renderTable(entries[0]);
